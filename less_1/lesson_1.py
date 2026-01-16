@@ -1,1 +1,1 @@
-print('kekerboy')
+print("дз сделал без урока")
