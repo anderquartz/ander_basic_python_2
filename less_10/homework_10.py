@@ -77,12 +77,12 @@ print(aa)
 
 
 words = ["apple", "banana", "cherry", "apple", "banana", "date", "cherry"]
-bb = {words.upper() for words in words}
+bb = {word.upper() for word in words}
 print(bb)
 
 
 grades = {"Alice": 85, "Bob": 78, "Charlie": 92, "David": 60, "Eve": 88}
-cc = {name: 'отлично' if grade >=80 else 'удовлетворительно' for name, grade, in grades.items()}
+cc = {name: 'отлично' if grade >=80 else 'удовлетворительно' for name, grade in grades.items()}
 print(cc)
 
 
@@ -92,5 +92,5 @@ print(dict_1)
 
 
 n = 10
-dict_2 = {x: {x ** 2 for x in range (1, x+1)} for x in range(1, n+1)}
+dict_2 = dict_2 = {i: {j ** 2 for j in range(1, i + 1)} for i in range(1, n + 1)}
 print(dict_2)

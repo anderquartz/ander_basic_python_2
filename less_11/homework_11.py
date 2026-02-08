@@ -32,13 +32,13 @@ print(get_max(10, 25, 7))
 
 def calculate(a, b, operation):
     if operation == "+":
-        return (a + b)
+        return a + b
     elif operation == "-":
-        return (a - b)
+        return a - b
     elif operation == "*":
-        return (a * b)
+        return a * b
     elif operation == "/":
-        return (a / b)
+        return a / b
 print(calculate(10, 5, '+'))
 print(calculate(10, 5, '-'))
 print(calculate(10, 5, '*'))
@@ -48,7 +48,7 @@ def compare_strings(s1, s2, ignore_case=True, ignore_spaces=True):
     if ignore_case:
         s1, s2 = s1.lower(), s2.lower()
     if ignore_spaces:
-       s1, s2 = s1.strip(), s2.strip()
+        s1, s2 = s1.strip(), s2.strip()
     return s1 == s2
 
 print(compare_strings("Hello", " hello "))
@@ -59,7 +59,7 @@ print(compare_strings("Hello ", "Hello", ignore_spaces=False))
 def summarize(*args):
     s = 0
     for i in args:
-        if isinstance(i, (int, float)): # isinstance проверяет является ли объект экземпляром указанного класса или его подкласса
+        if isinstance(i, (int, float)) and not isinstance(i, bool): # isinstance проверяет является ли объект экземпляром указанного класса или его подкласса
             s += i
     return s
 print(summarize(1, 2, 3))
