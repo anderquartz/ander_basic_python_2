@@ -39,7 +39,9 @@ def calculate(a, b, operation):
         return a * b
     elif operation == "/":
         return a / b
-print(calculate(10, 5, '+'))
+    else:
+        return "Не правильный символ для операции"
+print(calculate(10, 5, '^'))
 print(calculate(10, 5, '-'))
 print(calculate(10, 5, '*'))
 print(calculate(10, 5, '/'))
