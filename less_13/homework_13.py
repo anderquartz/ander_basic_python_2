@@ -70,6 +70,8 @@ def timer(repeat):
                 print(f"Повторение {i + 1}: {fulltime:.4f} сек")
             avg_time = total_time / repeat
             print(f"Среднее время выполнения: {avg_time:.4f} сек")
+            res = avg_time
+            return res
         return wrapper
     return decorator
 

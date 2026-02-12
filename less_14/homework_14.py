@@ -22,7 +22,7 @@ def timer(func):
         start = time.time()
         func(*args, **kwargs)
         end = time.time()
-        return print("Код выполнялся: ", end - start)
+        print("Код выполнялся: ", end - start)
     return wrapper
 
 @timer
