@@ -57,8 +57,11 @@ try:
     f = open('data.txt', encoding='utf-8')
     text = f.read()
     print(text)
+except FileNotFoundError:
+    print("Ошибка: Файл не найден")
 finally:
     f.close()
+
 
 
 try:
@@ -80,7 +83,7 @@ except FileNotFoundError:
 
 
 import datetime
-file_1 = "log.txt"
-with open(file_1, 'a+', encoding='utf-8') as f:
-    f.writelines(datetime.datetime.now().strftime("%d.%m.%Y %H:%M:%S\n"))
-    print(datetime.datetime.now().strftime("%d.%m.%Y %H:%M:%S"), " Запуск программы")
+
+with open("log.txt", "a", encoding="utf-8") as f:
+    f.write(datetime.datetime.now().strftime("%d.%m.%Y %H:%M:%S") + " Запуск программы\n")
+
